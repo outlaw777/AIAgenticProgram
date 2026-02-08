@@ -5,6 +5,9 @@ An advanced, modular AI agent designed for autonomous reasoning, planning, and t
 
 ---
 
+<img width="2550" height="1496" alt="Screenshot 2026-02-08 122446" src="https://github.com/user-attachments/assets/8d6fbdee-4d44-461e-89d5-fd08ef8ea606" />
+
+---
 ## 🚀 Features
 
 - **Agentic Reasoning:** Step-by-step planning, execution, and reflection.
