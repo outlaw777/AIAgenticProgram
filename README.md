@@ -129,7 +129,7 @@ pip install -r requirements.txt
 ### Create a .env file or edit config.yaml
   - OPENAI_API_KEY=your-key-here
 
-## 🏁 Usage
+##  Usage
    - python agent.py --task 
 
 
