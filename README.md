@@ -16,7 +16,7 @@ An advanced, modular AI agent designed for autonomous reasoning, planning, and t
 
 ---
 
-## 🚀 Features
+##  Features
 
 - **Agentic Reasoning:** Step-by-step planning, execution, and reflection.
 - **Tool Use:** Seamless integration with APIs and command-line tools.
@@ -26,7 +26,7 @@ An advanced, modular AI agent designed for autonomous reasoning, planning, and t
 
 ---
 
-# 🧱 Architecture Diagram (AI‑Focused)
+##  Architecture Diagram (AI‑Focused)
 ```
 ┌──────────────────────────────┐
 │          Task Input          │
@@ -58,7 +58,7 @@ An advanced, modular AI agent designed for autonomous reasoning, planning, and t
 ```
 
 ---
-# 🔁 Agent Loop Diagram
+## Agent Loop Diagram
 ```
 ┌──────────────┐
 │   Receive     │
@@ -86,7 +86,7 @@ An advanced, modular AI agent designed for autonomous reasoning, planning, and t
 ```
 
 ---
-# 📊 AI Skills Capabilities Matrix
+## AI Skills Capabilities Matrix
 
 | Capability | Description | AI Value |
 |-----------|-------------|----------|
@@ -99,7 +99,7 @@ An advanced, modular AI agent designed for autonomous reasoning, planning, and t
 
 ---
 
-# 🎯 AI Use Cases
+## AI Use Cases
 
 - Automated research and summarization  
 - Code generation and debugging  
@@ -111,7 +111,7 @@ An advanced, modular AI agent designed for autonomous reasoning, planning, and t
 
 ---
 
-## 📦 Installation
+##  Installation
 
 ### Prerequisites
 
@@ -125,7 +125,7 @@ git clone https://github.com/yourusername/ai-agentic-program.git
 cd ai-agentic-program
 pip install -r requirements.txt
 ```
-## ⚙️ Configuration
+##  Configuration
 ### Create a .env file or edit config.yaml
   - OPENAI_API_KEY=your-key-here
 
@@ -143,7 +143,7 @@ result = agent.run("Write a Python script to fetch weather data.")
 print(result)
 
 ```
-## 🧩 Project Structure
+##  Project Structure
 
 ```
 ai-agentic-program/
@@ -155,7 +155,7 @@ ai-agentic-program/
 └── README.md
 ```
 
-## 🛠️ Extending the Agent
+##  Extending the Agent
 Add Tools: Place new integrations in tools/.
 
 Add Skills: Implement new skills in skills/.
@@ -163,7 +163,7 @@ Add Skills: Implement new skills in skills/.
 Register: Update agent.py or configuration to include your additions.
 
 
-## 💡 Example Tasks
+## Example Tasks
 Automated research and summarization
 
 Code generation and debugging
@@ -173,15 +173,15 @@ Data extraction from web sources
 Multi-step planning and execution
 
 
-## 🤝 Contributing
+##  Contributing
 Contributions are welcome!
 Please open issues or pull requests for bug fixes, new features, or improvements.
 
 
-## 📄 License
+##  License
 This project is licensed under the MIT License.
 
-## ❓ Troubleshooting
+##  Troubleshooting
 Missing API Key:  
 Ensure your .env or config.yaml contains the correct API credentials.
 
