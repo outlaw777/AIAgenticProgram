@@ -130,6 +130,13 @@ class DetectionPipeline:
         self.audit_agent.record(classification)
         return classification
  ```
+## Use Cases
+DoD SAFE Email Detection – Automatically detect SAFE notifications and route them into compliance evidence pipelines.
+
+CMMC/RMF Evidence Automation – Generate structured audit logs for controls like AU, IR, and CM.
+
+Threat Detection & Triage – Autonomous anomaly detection with agentic enrichment.
+
 
 ##  Support the Project
 
