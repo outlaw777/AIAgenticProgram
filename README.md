@@ -1,195 +1,152 @@
-# Agentic AI Program
-An advanced, modular AI agent designed for autonomous reasoning, planning, and tool use. This project enables users to automate complex tasks by chaining reasoning steps and integrating with external tools or APIs.
+# Automated Detection Pipelines – Agentic AI Program
 
-
----
-
-<img width="2550" height="1496" alt="Screenshot 2026-02-08 122446" src="https://github.com/user-attachments/assets/8d6fbdee-4d44-461e-89d5-fd08ef8ea606" />
-
----
-## 🔰 Badges
-
-![Agentic AI](https://img.shields.io/badge/Agentic%20AI-Autonomous%20Reasoning-blue?style=for-the-badge)
-![Python](https://img.shields.io/badge/Python-3.8+-yellow?style=for-the-badge)
-![Modular Skills](https://img.shields.io/badge/Modular-Skills-green?style=for-the-badge)
-![Tool Use](https://img.shields.io/badge/Tool%20Use-API%20%7C%20CLI-orange?style=for-the-badge)
+An end‑to‑end agentic AI framework for automated detection, triage, and enrichment across cybersecurity, compliance, and operational workflows. Built by **Shield Protocol LLC** to demonstrate modern autonomous pipeline design using multi‑agent orchestration, LLM reasoning, and event‑driven automation.
 
 ---
 
-##  Features
+##  Overview
 
-- **Agentic Reasoning:** Step-by-step planning, execution, and reflection.
-- **Tool Use:** Seamless integration with APIs and command-line tools.
-- **Modular Design:** Easily extend with new skills or tools.
-- **Interactive Interface:** Use via CLI or as a Python module.
-- **Extensible:** Plug in new models, workflows, or integrations.
+This project showcases how agentic AI systems can be used to:
 
----
+- Detect anomalies or events  
+- Trigger autonomous reasoning agents  
+- Enrich data using external tools  
+- Generate structured outputs (JSON, fragments, compliance evidence)  
+- Route decisions to downstream systems (SIEM, SOAR, ticketing, SSP engines)
 
-##  Architecture Diagram (AI‑Focused)
-```
-┌──────────────────────────────┐
-│          Task Input          │
-└───────────────┬──────────────┘
-                │
-                ▼
-┌──────────────────────────────┐
-│       Reasoning Engine       │
-│  - Planning                  │
-│  - Decomposition             │
-│  - Reflection                │
-└───────────────┬──────────────┘
-                │
-                ▼
-┌──────────────────────────────┐
-│        Execution Layer       │
-│  - Tool Use                  │
-│  - API Calls                 │
-│  - CLI Integrations          │
-└───────────────┬──────────────┘
-                │
-                ▼
-┌──────────────────────────────┐
-│         Output Engine        │
-│  - CLI Output                │
-│  - Python Return Values      │
-└──────────────────────────────┘
-
-```
-
----
-## Agent Loop Diagram
-```
-┌──────────────┐
-│   Receive     │
-│    Task       │
-└───────┬──────┘
-▼
-┌──────────────┐
-│    Plan       │
-│ (Reasoning)   │
-└───────┬──────┘
-▼
-┌──────────────┐
-│   Execute     │
-│ (Tools/API)   │
-└───────┬──────┘
-▼
-┌──────────────┐
-│   Reflect     │
-│ (Improve)     │
-└───────┬──────┘
-▼
-┌──────────────┐
-│   Output      │
-└──────────────┘
-```
-
----
-## AI Skills Capabilities Matrix
-
-| Capability | Description | AI Value |
-|-----------|-------------|----------|
-| Agentic Reasoning | Step-by-step planning and reflection | Enables multi-step autonomous workflows |
-| Tool Use | API + CLI integrations | Allows external system interaction |
-| Modular Skills | Add new skills easily | Supports rapid feature expansion |
-| Extensible Architecture | Plug in new models/workflows | Future-proof design |
-| Interactive Interface | CLI + Python module | Flexible usage for devs and automation |
-| Deterministic Execution | Predictable reasoning loops | Reliable automation behavior |
+The pipelines are modular, cloud‑agnostic, and designed for real‑world enterprise use.
 
 ---
 
-## AI Use Cases
+##  Architecture
 
-- Automated research and summarization  
-- Code generation and debugging  
-- Data extraction from web sources  
-- Multi-step planning and execution  
-- Workflow automation  
-- API-driven task orchestration  
-- CLI-based automation pipelines  
+### Agent Types
+
+- **Detection Agent** – Monitors incoming events/logs  
+- **Classification Agent** – Determines severity, category, and required action  
+- **Enrichment Agent** – Pulls additional context (threat intel, compliance mappings)  
+- **Action Agent** – Executes automated workflows (alerts, fragments, tickets)  
+- **Audit Agent** – Writes structured evidence for RMF/CMMC  
 
 ---
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Agentic AI](https://img.shields.io/badge/Agentic-AI-orange)
+![Automation](https://img.shields.io/badge/Automation-Enabled-green)
+![Cybersecurity](https://img.shields.io/badge/Cybersecurity-ShieldProtocolLLC-red)
 
-##  Installation
+##  Pipeline Flow
 
-### Prerequisites
-
-- Python 3.8 or higher  
-- (Optional) API keys for LLM providers (e.g., OpenAI)
-
-### Setup
-
-```bash
-git clone https://github.com/yourusername/ai-agentic-program.git
-cd ai-agentic-program
-pip install -r requirements.txt
+```mermaid
+flowchart TD
+    A[Event Source] --> B[Detection Agent]
+    B --> C[Classification Agent]
+    C --> D{Severity > Threshold?}
+    D -->|Yes| E[Enrichment Agent]
+    D -->|No| F[Audit Agent]
+    E --> G[Action Agent]
+    G --> H[Audit Agent]
 ```
-##  Configuration
-### Create a .env file or edit config.yaml
-  - OPENAI_API_KEY=your-key-here
-
-##  Usage
-   - python agent.py --task 
-
-
-## Python Module
-
+---
 ```
-from agent import Agent
-
-agent = Agent()
-result = agent.run("Write a Python script to fetch weather data.")
-print(result)
-
-```
-##  Project Structure
-
-```
-ai-agentic-program/
-├── agent.py           # Main agent logic
-├── tools/             # Tool integrations (APIs, shell, etc.)
-├── skills/            # Modular agent skills
-├── config.yaml        # Configuration settings
-├── requirements.txt   # Python dependencies
+agentic-ai-detection-pipelines/
+│
+├── pipelines/
+│   ├── detection_pipeline.py
+│   ├── enrichment_pipeline.py
+│   ├── classification_pipeline.py
+│   └── action_pipeline.py
+│
+├── agents/
+│   ├── detection_agent.py
+│   ├── classification_agent.py
+│   ├── enrichment_agent.py
+│   ├── action_agent.py
+│   └── audit_agent.py
+│
+├── examples/
+│   ├── dod_safe_email_detection.json
+│   ├── cmmc_control_mapping.json
+│   └── anomaly_event_sample.json
+│
+├── docs/
+│   ├── architecture.md
+│   ├── agent_design.md
+│   └── pipeline_flow.md
+│
 └── README.md
 ```
+---
 
-##  Extending the Agent
-Add Tools: Place new integrations in tools/.
+# agents/detection_agent.py
+---
+```import json
 
-Add Skills: Implement new skills in skills/.
+class DetectionAgent:
+    def __init__(self):
+        pass
 
-Register: Update agent.py or configuration to include your additions.
+    def detect(self, event):
+        """Basic detection logic for incoming events."""
+        if "dod_safe" in event.get("source", "").lower():
+            return {
+                "type": "dod_safe_event",
+                "status": "detected",
+                "details": event
+            }
+        if event.get("anomaly_score", 0) > 0.7:
+            return {
+                "type": "anomaly",
+                "status": "detected",
+                "details": event
+            }
+        return {"status": "ignored"}
+```
+# pipelines/detection_pipeline.py
+---
+``` from agents.detection_agent import DetectionAgent
+from agents.classification_agent import ClassificationAgent
+from agents.enrichment_agent import EnrichmentAgent
+from agents.action_agent import ActionAgent
+from agents.audit_agent import AuditAgent
 
+class DetectionPipeline:
+    def __init__(self):
+        self.detect_agent = DetectionAgent()
+        self.classify_agent = ClassificationAgent()
+        self.enrich_agent = EnrichmentAgent()
+        self.action_agent = ActionAgent()
+        self.audit_agent = AuditAgent()
 
-## Example Tasks
-Automated research and summarization
+    def run(self, event):
+        detection = self.detect_agent.detect(event)
+        classification = self.classify_agent.classify(detection)
 
-Code generation and debugging
+        if classification["severity"] >= 3:
+            enriched = self.enrich_agent.enrich(classification)
+            action = self.action_agent.execute(enriched)
+            self.audit_agent.record(action)
+            return action
 
-Data extraction from web sources
+        self.audit_agent.record(classification)
+        return classification
+ ```
 
-Multi-step planning and execution
+##  Support the Project
 
+If you find this repository useful, consider:
 
-##  Contributing
-Contributions are welcome!
-Please open issues or pull requests for bug fixes, new features, or improvements.
+- Starring  the repo  
+- Sharing it with other cybersecurity engineers  
+- Using it as a foundation for your own agentic AI pipelines  
 
+Your support helps expand the open‑source ecosystem around autonomous detection and compliance automation.
 
-##  License
-This project is licensed under the MIT License.
+---
 
-##  Troubleshooting
-Missing API Key:  
-Ensure your .env or config.yaml contains the correct API credentials.
+##  Final Notes
 
-Dependency Issues:  
-Run pip install -r requirements.txt.
+This repository demonstrates how agentic AI can be applied to real‑world cybersecurity and compliance workflows.  
+It is designed to be clear, modular, and immediately useful — whether you’re building detection pipelines, automating evidence generation, or experimenting with multi‑agent systems.
 
-Other Problems:  
-Please open an issue with details and error messages.
-
-
+Thanks for checking out the project.
 
